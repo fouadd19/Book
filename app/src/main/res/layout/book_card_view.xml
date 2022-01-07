@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bookCardView"
+    android:layout_width="match_parent"
+    android:layout_height="270dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bookConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/bookImageView"
+            android:layout_width="200dp"
+            android:layout_height="270dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/books"
+            tools:srcCompat="@drawable/books" />
+
+        <TextView
+            android:id="@+id/bookTitleTextView"
+            android:layout_width="192dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bookImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Book Title" />
+
+        <TextView
+            android:id="@+id/bookAuthorTextView"
+            android:layout_width="182dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bookImageView"
+            app:layout_constraintTop_toBottomOf="@+id/bookTitleTextView"
+            tools:text="Author" />
+
+        <TextView
+            android:id="@+id/bookPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/addFavoritesButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bookImageView"
+            tools:text="Price" />
+
+        <TextView
+            android:id="@+id/bookPublishedDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/bookPriceTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bookImageView"
+            tools:text="DD-MM-YY" />
+
+        <ImageView
+            android:id="@+id/addFavoritesButton"
+            android:layout_width="61dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <ImageView
+            android:id="@+id/bookDeleteButton"
+            android:layout_width="60dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="5dp"
+            android:background="#FF0000"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bookImageView"
+            app:layout_constraintTop_toBottomOf="@+id/bookPriceTextView"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
